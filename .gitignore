@@ -1,0 +1,15 @@
+# Compiled CUDA executable
+batch_image_processing
+
+# Generated input/output image folders
+input_images/
+input_ppm/
+output_ppm/
+
+# Python and notebook files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Temporary files
+*.tmp
