@@ -1,1 +1,49 @@
+==================================================
+CUDA BATCH IMAGE PROCESSING PROJECT
+==================================================
 
+GPU Device       : Tesla T4
+CUDA Capability  : 7.5
+Dataset          : CIFAR-10
+Images Requested : 500
+Image Size       : 32 x 32
+Image Type       : RGB
+CUDA Block Size  : 256
+
+Loading input images...
+Images loaded successfully: 500
+
+Launching CUDA kernel...
+Total pixels     : 512000
+Blocks launched  : 2000
+Threads/block    : 256
+
+CUDA kernel completed successfully.
+
+PROCESSING RESULTS
+--------------------------------------------------
+Images processed      : 500
+Images saved          : 500
+CPU -> GPU transfer   : 0.360 ms
+GPU kernel execution  : 0.224 ms
+CUDA blocks           : 2000
+CUDA threads/block    : 256
+
+Image processing operation:
+RGB -> Grayscale -> Brightness Adjustment
+
+GPU processing completed successfully.
+CUDA memory released successfully.
+
+==================================================
+CUDA IMAGE PROCESSING COMPLETED
+==================================================
+
+Command-line execution:
+./batch_image_processing input_ppm output_ppm 500
+
+Build command:
+nvcc -std=c++17 batch_image_processing.cu -o batch_image_processing
+
+Makefile build:
+make
